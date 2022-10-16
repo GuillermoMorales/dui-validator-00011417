@@ -1,15 +1,16 @@
 import { useState } from 'react'
+import duiValidator from './duiValidator';
 
 function App() {
   const [value, setValue] = useState("")
 
-  /*const onSubmit = () => { 
+  const onSubmit = () => { 
     if (duiValidator(value)) {
       console.log('es true');
     } else { 
       console.log('no es true');
     }
-  }*/
+  }
 
   return (
     <div className='relative bg-slate-300 w-full min-h-screen flex items-center justify-center flex-col'>
@@ -19,7 +20,7 @@ function App() {
         className='flex flex-col gap-5 items-center'
         onSubmit={(e) => {
           e.preventDefault()
-          /*onSubmit()*/
+          onSubmit()
          } }
       >
         <input
